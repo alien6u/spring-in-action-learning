@@ -23,9 +23,9 @@
 	<bean id="theStage" class="com.springinaction.springidol.Stage"
 		factory-method="getInstance">
 	</bean>
-	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
-		<property name="song" value="Jingle Bells"></property>
-		<property name="instrument" ref="piano"></property>
+	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist"
+	    p:song="Jingle Bells"
+	    p:instrument-ref="piano">
 	</bean>
 	<bean id="saxophone" class="com.springinaction.springidol.Saxophone"></bean>
 	<bean id="piano" class="com.springinaction.springidol.Piano"></bean>
