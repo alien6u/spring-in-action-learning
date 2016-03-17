@@ -24,9 +24,15 @@
 		factory-method="getInstance">
 	</bean>
 	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist"
-	    p:song="Jingle Bells"
-	    p:instrument-ref="piano">
+		p:song="Jingle Bells" p:instrument-ref="piano">
 	</bean>
 	<bean id="saxophone" class="com.springinaction.springidol.Saxophone"></bean>
 	<bean id="piano" class="com.springinaction.springidol.Piano"></bean>
+	<!-- <bean id="hank" class="con.springinaction.springidol.OneManBand"> <property 
+		name="instruments"> <props> <prop key="GUITAR">STRUM STRUM STRUM</prop> <prop 
+		key="CYMBAL">CRASH CRASH CRASH</prop> <prop key="HARMONICA">HUM HUM HUM</prop> 
+		</props> </property> </bean> -->
+	<bean id="carl" class="com.springinaction.springidol.Instrumentalist">
+		<property name="song" value="#{kenny.song}" />
+	</bean>
 </beans>
