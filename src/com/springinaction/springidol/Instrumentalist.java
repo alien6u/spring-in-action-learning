@@ -1,5 +1,7 @@
 package com.springinaction.springidol;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Instrumentalist implements Perfomer{
 
 	public Instrumentalist(){
@@ -20,6 +22,8 @@ public class Instrumentalist implements Perfomer{
 		instrument.play();
 	}
 	
+	@Autowired
+	@StringedInstrument
 	private Instrument instrument;
 	
 	public void setInstrument(Instrument instrument){

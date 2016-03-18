@@ -11,20 +11,21 @@
         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
         http://www.springframework.org/schema/context     
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config />
 	<!-- HandlerMapping -->
 	<bean id="duke" class="com.springinaction.springidol.Juggler">
 		<constructor-arg value="15"></constructor-arg>
 	</bean>
 	<bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"></bean>
-	<bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler">
-		<constructor-arg value="15"></constructor-arg>
-		<constructor-arg ref="sonnet29"></constructor-arg>
+	<bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler"
+		autowire="constructor">
+		<!-- <constructor-arg value="15"></constructor-arg> <constructor-arg ref="sonnet29"></constructor-arg> -->
 	</bean>
 	<bean id="theStage" class="com.springinaction.springidol.Stage"
 		factory-method="getInstance">
 	</bean>
-	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist"
-		p:song="Jingle Bells" p:instrument-ref="piano">
+	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
+		<!-- p:song="Jingle Bells" p:instrument-ref="piano"> -->
 	</bean>
 	<bean id="saxophone" class="com.springinaction.springidol.Saxophone"></bean>
 	<bean id="piano" class="com.springinaction.springidol.Piano"></bean>
@@ -34,5 +35,8 @@
 		</props> </property> </bean> -->
 	<bean id="carl" class="com.springinaction.springidol.Instrumentalist">
 		<property name="song" value="#{kenny.song}" />
+	</bean>
+	<bean class="com.springinaction.springidol.Guitar">
+		<qualifier value="stringed" />
 	</bean>
 </beans>

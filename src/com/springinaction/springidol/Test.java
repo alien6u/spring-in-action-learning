@@ -11,9 +11,9 @@ public class Test {
 	public void test() {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
 		Perfomer perfomer = (Perfomer)ctx.getBean("kenny");
-		Perfomer perfomer1 = (Perfomer)ctx.getBean("carl");
+		//Perfomer perfomer1 = (Perfomer)ctx.getBean("carl");
 		perfomer.perform();
-		perfomer1.perform();
+		//perfomer1.perform();
 	}
 
 }
