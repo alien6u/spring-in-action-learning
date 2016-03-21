@@ -5,11 +5,12 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="spring-in-action-learning">
     <property environment="env"/>
+    <property name="JRE_LIB" value="C:/Program Files/Java/jre7/lib/rt.jar"/>
     <property name="ECLIPSE_HOME" value="E:/eclipse_javaEE/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.6"/>
-    <property name="source" value="1.6"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
         <pathelement location="E:/apache-tomcat-7.0.50/lib/annotations-api.jar"/>
         <pathelement location="E:/apache-tomcat-7.0.50/lib/catalina-ant.jar"/>
@@ -70,11 +71,22 @@
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
         <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="${JRE_LIB}"/>
+        <pathelement location="${ECLIPSE_HOME}"/>
+    </path>
+    <path id="run.spring-in-action-learning.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="spring-in-action-learning.classpath"/>
+    </path>
+    <path id="run.Test.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="spring-in-action-learning.classpath"/>
     </path>
     <target name="init">
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
             <fileset dir="src">
+                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -111,7 +123,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="com.springinaction.springidol.Test" todir="${junit.output.dir}"/>
-            <classpath refid="spring-in-action-learning.classpath"/>
+            <classpath refid="run.spring-in-action-learning.classpath"/>
         </junit>
     </target>
     <target name="Test">
@@ -119,7 +131,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="com.springinaction.springidol.Test" todir="${junit.output.dir}"/>
-            <classpath refid="spring-in-action-learning.classpath"/>
+            <classpath refid="run.Test.classpath"/>
         </junit>
     </target>
     <target name="junitreport">
