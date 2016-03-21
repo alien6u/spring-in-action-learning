@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="spring-in-action-learning">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="E:/eclipse_javaEE/eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/annotations-api.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/catalina-ant.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/catalina-ha.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/catalina-tribes.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/catalina.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/ecj-4.3.1.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/el-api.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/jasper-el.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/jasper.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/jsp-api.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/servlet-api.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-api.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-coyote.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-dbcp.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-jdbc.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat-util.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/tomcat7-websocket.jar"/>
+        <pathelement location="E:/apache-tomcat-7.0.50/lib/websocket-api.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jstl-1.1.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.aop-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.asm-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.aspects-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.beans-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.context-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.context.support-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.core-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.expression-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.instrument-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.instrument.tomcat-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.jdbc-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.jms-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.orm-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.oxm-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.test-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.transaction-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.web-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.web.portlet-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.web.servlet-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.springframework.web.struts-3.1.3.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/servlet-api.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/standard-1.1.2.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="spring-in-action-learning.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="spring-in-action-learning.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="spring-in-action-learning">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.springinaction.springidol.Test" todir="${junit.output.dir}"/>
+            <classpath refid="spring-in-action-learning.classpath"/>
+        </junit>
+    </target>
+    <target name="Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.springinaction.springidol.Test" todir="${junit.output.dir}"/>
+            <classpath refid="spring-in-action-learning.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
