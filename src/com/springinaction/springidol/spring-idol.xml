@@ -12,6 +12,10 @@
         http://www.springframework.org/schema/context     
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<context:annotation-config />
+	<!-- 组件过滤规则 -->
+	<!-- <context:component-scan base-package="com.springinaction.spring">
+	    <context:include-filter type="assignable" expression="com.springinaction.spring.Instrument"/>
+	</context:component-scan> -->
 	<!-- HandlerMapping -->
 	<bean id="duke" class="com.springinaction.springidol.Juggler">
 		<constructor-arg value="15"></constructor-arg>
