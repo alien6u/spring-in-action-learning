@@ -106,7 +106,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <!-- <target name="spring-in-action-learning">
+    <target name="spring-in-action-learning">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -129,5 +129,5 @@
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
-    </target> -->
+    </target>
 </project>
